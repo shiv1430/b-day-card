@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday 🎂</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:linear-gradient(-45deg,#ff758c,#ff7eb3,#7afcff,#b388ff);
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+    overflow-x:hidden;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.glass{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    border-radius:30px;
+    padding:40px;
+    box-shadow:0 10px 40px rgba(0,0,0,.2);
+}
+
+.title{
+    color:white;
+    font-size:4rem;
+    font-weight:bold;
+}
+
+.profile{
+    width:340px;
+    height:340px;
+    object-fit:cover;
+    border-radius:50%;
+    border:8px solid white;
+    margin:25px 0;
+    box-shadow:0 0 30px rgba(255,255,255,.5);
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+.message{
+    color:white;
+    font-size:1.2rem;
+    min-height:70px;
+}
+
+.section{
+    padding:90px 20px;
+}
+
+.card-custom{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(12px);
+    border:none;
+    border-radius:25px;
+    color:white;
+    height:100%;
+    transition:.4s;
+}
+
+.card-custom:hover{
+    transform:translateY(-10px);
+}
+
+.gallery img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    border-radius:25px;
+    transition:.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+.footer{
+    text-align:center;
+    color:white;
+    padding:30px;
+    font-size:18px;
+}
+
+#surprise{
+    display:none;
+}
+
+.balloon{
+    position:fixed;
+    bottom:-100px;
+    font-size:40px;
+    animation:fly 10s linear infinite;
+    z-index:1;
+}
+
+@keyframes fly{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-120vh);
+    }
+}
+
+@media(max-width:768px){
+
+.title{
+    font-size:2.4rem;
+}
+
+.profile{
+    width:250px;
+    height:250px;
+}
+
+.gallery img{
+    height:250px;
+}
+
+.glass{
+    padding:25px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="balloon" style="left:10%">🎈</div>
+<div class="balloon" style="left:25%;animation-delay:2s;">🎈</div>
+<div class="balloon" style="left:45%;animation-delay:4s;">🎈</div>
+<div class="balloon" style="left:65%;animation-delay:1s;">🎈</div>
+<div class="balloon" style="left:85%;animation-delay:3s;">🎈</div>
+
+<section class="hero">
+<div class="glass">
+
+<h1 class="title">🎂 Happy Birthday 🎂</h1>
+
+<img src="profile.jpg" class="profile" alt="Birthday">
+
+<p class="message" id="typing"></p>
+
+<button class="btn btn-light btn-lg mt-3" onclick="showSurprise()">
+🎁 Open Surprise
+</button>
+
+</div>
+</section>
+
+<section class="container section">
+
+<h2 class="text-center text-white mb-5">
+💖 Special Wishes
+</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="card card-custom p-4">
+<h3>🌟 Happiness</h3>
+<p>
+May your life always be filled with happiness and beautiful moments.
+</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card card-custom p-4">
+<h3>🎉 Success</h3>
+<p>
+May every goal you set become a reality and every dream come true.
+</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card card-custom p-4">
+<h3>❤️ Love</h3>
+<p>
+May you always be surrounded by people who care for and support you.
+</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="container section gallery">
+
+<h2 class="text-center text-white mb-5">
+📸 Beautiful Memories
+</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<img src="photo1.jpg" alt="">
+</div>
+
+<div class="col-md-4">
+<img src="photo2.jpg" alt="">
+</div>
+
+<div class="col-md-4">
+<img src="photo3.jpg" alt="">
+</div>
+
+</div>
+
+</section>
+
+<section id="surprise" class="section text-center">
+
+<h1 class="display-2 text-white">
+🎉 Surprise 🎉
+</h1>
+
+<p class="text-white fs-3 mt-4">
+You are an amazing person and deserve all the happiness in the world ❤️
+</p>
+
+<p class="text-white fs-5 mt-3">
+Wishing you lots of success, joy and unforgettable memories ahead.
+</p>
+
+</section>
+
+<footer class="footer">
+Made with ❤️ for a Special Person
+</footer>
+
+<script>
+
+const text =
+"Today is your special day. May happiness, success and love always stay with you. Happy Birthday! ❤️";
+
+let i = 0;
+
+function typeWriter(){
+
+if(i < text.length){
+
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+
+setTimeout(typeWriter,40);
+
+}
+
+}
+
+typeWriter();
+
+function showSurprise(){
+
+document.getElementById("surprise").style.display = "block";
+
+document.getElementById("surprise").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>
